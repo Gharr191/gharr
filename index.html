@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<title>Giriş Formu</title>
+<style>
+/* From Uiverse.io by micaelgomestavares */ 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #ffffff;
+  padding: 30px;
+  width: 450px;
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+::placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form button {
+  align-self: flex-end;
+}
+
+.flex-column > label {
+  color: #151717;
+  font-weight: 600;
+}
+
+.inputForm {
+  border: 1.5px solid #ecedec;
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+.input {
+  margin-left: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 85%;
+  height: 100%;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.inputForm:focus-within {
+  border: 1.5px solid #2d79f3;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.flex-row > div > label {
+  font-size: 14px;
+  color: black;
+  font-weight: 400;
+}
+
+.span {
+  font-size: 14px;
+  margin-left: 5px;
+  color: #2d79f3;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button-submit {
+  margin: 20px 0 10px 0;
+  background-color: #151717;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.button-submit:hover {
+  background-color: #252727;
+}
+
+.p {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.btn {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  gap: 10px;
+  border: 1px solid #ededef;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  border: 1px solid #2d79f3;
+}
+
+/* Şifre göster butonu stili */
+.password-toggle {
+  cursor: pointer;
+  margin-left: 5px;
+  fill: #888;
+  transition: fill 0.3s ease;
+}
+
+.password-toggle:hover {
+  fill: #2d79f3;
+}
+</style>
+</head>
+<body>
+
+<form class="form" id="loginForm">
+    <div class="flex-column">
+      <label>Email </label>
+    </div>
+    <div class="inputForm">
+      <svg height="20" viewBox="0 0 32 32" width="20" xmlns="http://www.w3.org/2000/svg"><g id="Layer_3" data-name="Layer 3"><path d="m30.853 13.87a15 15 0 0 0 -29.729 4.082 15.1 15.1 0 0 0 12.876 12.918 15.6 15.6 0 0 0 2.016.13 14.85 14.85 0 0 0 7.715-2.145 1 1 0 1 0 -1.031-1.711 13.007 13.007 0 1 1 5.458-6.529 2.149 2.149 0 0 1 -4.158-.759v-10.856a1 1 0 0 0 -2 0v1.726a8 8 0 1 0 .2 10.325 4.135 4.135 0 0 0 7.83.274 15.2 15.2 0 0 0 .823-7.455zm-14.853 8.13a6 6 0 1 1 6-6 6.006 6.006 0 0 1 -6 6z"></path></g></svg>
+      <input type="text" class="input" placeholder="Enter your Email" required name="email">
+    </div>
+
+    <div class="flex-column">
+      <label>Password </label>
+    </div>
+    <div class="inputForm" style="position: relative;">
+      <svg height="20" viewBox="-64 0 512 512" width="20" xmlns="http://www.w3.org/2000/svg"><path d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0"></path><path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0"></path></svg>        
+      <input type="password" class="input" placeholder="Enter your Password" required name="password" id="passwordInput">
+      <svg class="password-toggle" id="togglePassword" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" height="20" style="position:absolute; right:10px; top:50%; transform: translateY(-50%); cursor:pointer;"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg>
+    </div>
+
+    <div class="flex-row">
+      <div>
+      <input type="checkbox" id="rememberMe">
+      <label for="rememberMe">Remember me </label>
+      </div>
+      <span class="span">Forgot password?</span>
+    </div>
+    <button type="submit" class="button-submit">Sign in</button>
+
+    <p class="p">Or sign in with</p>
+
+    <button type="button" class="btn" id="googleBtn">
+      <svg width="20" height="20" viewBox="0 0 256 262" xmlns="http://www.w3.org/2000/svg"><path d="M255.96 133.74c0-10.79-1.02-21.14-2.93-31.24H130.57v59.12h70.42c-3.04 16.04-12.27 29.64-26.23 38.75v32.13h42.31c24.74-22.8 38.89-56.3 38.89-98.76z" fill="#4285F4"/><path d="M130.57 258c35.3 0 64.95-11.66 86.6-31.7l-42.31-32.13c-11.68 7.86-26.68 12.51-44.29 12.51-33.99 0-62.82-22.96-73.22-53.74H13.4v33.68C35.9 234.29 79.02 258 130.57 258z" fill="#34A853"/><path d="M57.36 156.94c-2.8-8.37-4.41-17.3-4.41-26.44s1.61-18.07 4.41-26.44v-33.68H13.4A128.053 128.053 0 0 0 0 130.5c0 20.81 5.06 40.44 13.4 58.32z" fill="#FBBC05"/><path d="M130.57 51.96c18.98 0 35.95 6.54 49.37 19.38l37.01-37.01C195.48 13.6 165.83 0 130.57 0 79.02 0 35.9 23.71 13.4 58.32l43.96 33.68c10.4-30.78 39.23-53.74 73.22-53.74z" fill="#EA4335"/></svg>
+      Google
+    </button>
+
+    <button type="button" class="btn" id="appleBtn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.365 1.43c-1.37.004-3.04.933-4.02 2.13-1.14 1.38-1.44 3.12-1.4 3.22 0 .07 1.72.06 3.03-1.14 1.4-1.3 1.97-3.06 1.89-3.5-.1-.55-.46-1.68-1.5-1.68zM20 16.5c0 3-2.34 4.35-2.38 4.37-1.53.87-2.89.44-3.61.26-.77-.19-1.5-.45-2.3-.45-1.06 0-1.36.29-2.28.43-.77.12-1.54.13-2.36-.61-1.14-1-1.94-2.56-1.94-4.54 0-3.36 2.3-5 2.47-5.14 1.56-1 2.68-.26 3.36.02.82.33 1.58.89 2.7.89 1.13 0 1.63-.44 2.74-.96.44-.2.83-.3 1.26-.3.02 0 2.45 0 2.45 3.54z"/></svg>
+      Apple
+    </button>
+</form>
+
+<!-- Bilgilerin gösterileceği alan -->
+<div id="resultArea" style="color:#151717; font-weight:600; margin-top:15px;"></div>
+
+<script>
+// Şifre göster/gizle
+const togglePassword = document.getElementById('togglePassword');
+const passwordInput = document.getElementById('passwordInput');
+togglePassword.addEventListener('click', () => {
+  const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+  passwordInput.setAttribute('type', type);
+});
+
+// Google ve Apple butonları yeni sekmede açsın
+document.getElementById('googleBtn').addEventListener('click', () => {
+  window.open('https://accounts.google.com/signin', '_blank');
+});
+document.getElementById('appleBtn').addEventListener('click', () => {
+  window.open('https://appleid.apple.com/signin', '_blank');
+});
+
+// Form gönderme işlemi - bilgiler sayfada gösterilir
+const form = document.getElementById('loginForm');
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const email = form.querySelector('input[name="email"]').value;
+  const password = form.querySelector('input[name="password"]').value;
+
+  // Bilgileri sayfa içinde göster
+  document.getElementById('resultArea').textContent = `Email: ${email}, Password: ${password}`;
+});
+</script>
+
+</body>
+</html>
+<style>
+/* From Uiverse.io by micaelgomestavares */ 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #ffffff;
+  padding: 30px;
+  width: 450px;
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+::placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form button {
+  align-self: flex-end;
+}
+
+.flex-column > label {
+  color: #151717;
+  font-weight: 600;
+}
+
+.inputForm {
+  box-sizing: border-box;
+  border: 1.5px solid #ecedec;
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+.input {
+  box-sizing: border-box;
+  margin-left: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 85%;
+  height: 100%;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.inputForm:focus-within {
+  border: 1.5px solid #2d79f3;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.flex-row > div > label {
+  font-size: 14px;
+  color: black;
+  font-weight: 400;
+}
+
+.span {
+  font-size: 14px;
+  margin-left: 5px;
+  color: #2d79f3;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button-submit {
+  margin: 20px 0 10px 0;
+  background-color: #151717;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.button-submit:hover {
+  background-color: #252727;
+}
+
+.p {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.btn {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  gap: 10px;
+  border: 1px solid #ededef;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  border: 1px solid #2d79f3;
+  ;
+}
+
+    
